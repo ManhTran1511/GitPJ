@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace TestPJ.Models
 {
@@ -9,5 +10,7 @@ namespace TestPJ.Models
         public DateTime NgayXuat { get; set; }       
         public string TrangThai { get; set; }
         public double TongTien { get; set; }
+        public virtual KhachHang KhachHangs { get; set; }
+        public ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; }
     }
 }

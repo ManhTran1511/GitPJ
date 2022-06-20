@@ -1,4 +1,6 @@
-﻿namespace TestPJ.Models
+﻿using System.Collections.Generic;
+
+namespace TestPJ.Models
 {
     public class SanPham
     {
@@ -10,5 +12,8 @@
         public string TrangThai { get; set; }
         public int SoLuong { get; set; }
         public int IdLoaiSP { get; set; }
+        public virtual LoaiSanPham LoaiSanPhams { get; set; }
+        public ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; }
+        public ICollection<SanPhamKho> SanPhamKhos { get; set; }
     }
 }

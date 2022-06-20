@@ -1,4 +1,6 @@
-﻿namespace TestPJ.Models
+﻿using System.Collections.Generic;
+
+namespace TestPJ.Models
 {
     public class KhachHang
     {
@@ -9,5 +11,7 @@
         public string SDT { get; set; }
         public string TrangThai { get; set; }
         public int CapDo { get; set; }
+        public ICollection<HoaDon> HoaDons { get; set; }
+
     }
 }
